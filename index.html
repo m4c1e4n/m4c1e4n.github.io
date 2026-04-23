@@ -3,533 +3,852 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maclean Opoku Antwi</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<title>Maclean Opoku Antwi — IT Educator & Tech Professional</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;transition:background 0.25s ease,color 0.25s ease,border-color 0.25s ease,box-shadow 0.25s ease}
-:root{
---ink:#0b1e3a;--ink2:#25435e;--ink3:#47678a;
---bg:#eaf2ff;--bg2:#f7faff;--accent:#1d4ed8;--accent2:#93c5fd;
---accent3:#a5b4fc;--gold:#f59e0b;--border:#cbd5e1;
---surface:#ffffff;--shadow:0 16px 34px rgba(30,58,138,0.15);
---nav-bg:rgba(255,255,255,0.82);
-}
-.dark-mode{
---ink:#e2e8f0;--ink2:#cbd5e1;--ink3:#94a3b8;
---bg:#0b1220;--bg2:#111c34;--accent:#60a5fa;--accent2:#3b82f6;
---accent3:#1d4ed8;--gold:#facc15;--border:#334155;
---surface:#1f2a44;--shadow:0 18px 38px rgba(14,23,54,0.5);
---nav-bg:rgba(15,23,44,0.88);
-}
-html{scroll-behavior:smooth}
-body{font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(140deg, #eff6ff 0%, #e0f2fe 45%, #dbeafe 100%);color:var(--ink);overflow-x:hidden;position:relative;}
-html.dark-mode body{background:linear-gradient(130deg, #0a1021 0%, #101a33 45%, #131f44 100%);color:var(--ink);}
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-body::before{content:'';position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 20% 15%, rgba(59,130,246,0.24), rgba(59,130,246,0) 45%), radial-gradient(circle at 82% 85%, rgba(99,102,241,0.16), rgba(99,102,241,0) 48%);z-index:-1;}
+  :root {
+    --bg: #edf1f5;
+    --surface: #f7f8fa;
+    --surface-strong: #ffffff;
+    --nav-bg: rgba(247,248,250,0.88);
+    --ink: #16202b;
+    --ink-soft: #556171;
+    --accent: #0f3d63;
+    --accent-light: #2e5e86;
+    --accent-pale: #d9e5f0;
+    --accent-warm: #b58a56;
+    --rule: #d5dde6;
+    --white: #ffffff;
+    --shadow: 0 24px 60px rgba(13, 28, 45, 0.08);
+    --body-glow: rgba(181,138,86,0.12);
+    --hero-tint-1: rgba(15,61,99,0.04);
+    --hero-tint-2: rgba(181,138,86,0.03);
+    --hero-panel-bg: linear-gradient(180deg, #173556 0%, #10283f 100%);
+    --hero-panel-glow: rgba(181,138,86,0.35);
+    --ghost-bg: rgba(255,255,255,0.75);
+    --contact-bg: linear-gradient(180deg, #162434 0%, #0d1723 100%);
+  }
 
-body::after{content:'';position:fixed;inset:0;pointer-events:none;opacity:0.08;background-image:linear-gradient(180deg, rgba(255,255,255,0.08), transparent 45%, rgba(255,255,255,0.08));z-index:-1;}
+  body[data-theme="dark"] {
+    --bg: #09111a;
+    --surface: #101a25;
+    --surface-strong: #0f1822;
+    --nav-bg: rgba(10,17,26,0.84);
+    --ink: #edf3f9;
+    --ink-soft: #9db0c3;
+    --accent: #8ab4d9;
+    --accent-light: #a9c8e3;
+    --accent-pale: #183147;
+    --accent-warm: #d3ae79;
+    --rule: #24384b;
+    --white: #f7fbff;
+    --shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+    --body-glow: rgba(138,180,217,0.1);
+    --hero-tint-1: rgba(138,180,217,0.08);
+    --hero-tint-2: rgba(211,174,121,0.05);
+    --hero-panel-bg: linear-gradient(180deg, #14283d 0%, #0c1620 100%);
+    --hero-panel-glow: rgba(211,174,121,0.24);
+    --ghost-bg: rgba(15,24,34,0.75);
+    --contact-bg: linear-gradient(180deg, #101a25 0%, #09111a 100%);
+  }
 
+  html { scroll-behavior: smooth; }
 
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--nav-bg);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:72px;box-shadow:0 6px 14px rgba(15,23,42,0.08)}
-.nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.2rem;color:var(--ink);letter-spacing:-0.02em;animation:logoPulse 1.2s ease forwards}
-.nav-logo span{color:var(--accent);}
-.nav-links{display:flex;gap:1.5rem;list-style:none}
-.nav-links a{font-size:0.9rem;color:var(--ink2);text-decoration:none;font-weight:600;letter-spacing:0.02em;transition:color 0.25s ease-in-out}
-.nav-links a:hover{color:var(--accent)}
-.nav-cta{background:var(--accent);color:#fff;padding:0.6rem 1.25rem;border-radius:999px;font-size:0.85rem;font-weight:700;text-decoration:none;transition:all 0.2s, transform 0.2s;box-shadow:0 8px 18px rgba(37,99,235,0.28)}
-.nav-cta:hover{background:#1d4ed8;transform:translateY(-1px);box-shadow:0 10px 22px rgba(37,99,235,0.36)}
+  body {
+    background:
+      radial-gradient(circle at top left, var(--body-glow), transparent 28%),
+      linear-gradient(180deg, var(--surface) 0%, var(--bg) 100%);
+    color: var(--ink);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
 
-section{padding:6rem 2rem;}
-.container{max-width:1080px;margin:0 auto;transition:transform 0.45s ease;}
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: var(--nav-bg);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--rule);
+    padding: 0 clamp(1.5rem, 5vw, 4rem);
+    height: 60px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .nav-links {
+    display: flex; gap: 2rem; list-style: none;
+  }
+  .nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .nav-links a {
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--accent); }
+  .theme-toggle {
+    border: 1px solid var(--rule);
+    background: color-mix(in srgb, var(--surface-strong) 68%, transparent);
+    color: var(--ink);
+    border-radius: 999px;
+    padding: 0.45rem 0.8rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: border-color 0.25s, background 0.25s, color 0.25s;
+  }
+  .theme-toggle:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  .theme-toggle svg {
+    width: 14px;
+    height: 14px;
+  }
 
-#home{padding-top:9rem;padding-bottom:6rem;min-height:100vh;display:flex;align-items:center;}
-.hero-grid{display:grid;grid-template-columns:1.05fr 0.95fr;gap:3.5rem;align-items:center;}
-.hero-tag{display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent2);border:1px solid var(--accent3);color:var(--accent);font-size:0.8rem;font-weight:700;padding:0.4rem 1rem;border-radius:999px;margin-bottom:1.5rem;letter-spacing:0.05em;text-transform:uppercase}.hero-tag::before{content:'';width:6px;height:6px;background:var(--accent);border-radius:50%;display:inline-block}
-h1{font-family:'Syne',sans-serif;font-size:3.4rem;font-weight:800;line-height:1.1;letter-spacing:-0.03em;color:#0f172a;margin-bottom:1.2rem}
-h1 em{font-style:normal;color:var(--accent)}
-.hero-sub{font-size:1.05rem;color:var(--ink2);line-height:1.7;margin-bottom:2rem;font-weight:400;max-width:520px}
-.hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
-.btn-primary{background:var(--accent);color:#fff;padding:0.75rem 1.65rem;border-radius:999px;font-size:0.9rem;font-weight:700;text-decoration:none;transition:all 0.25s;border:2px solid transparent;box-shadow:0 8px 16px rgba(37,99,235,0.2)}
-.btn-primary:hover{background:#1d4ed8;transform:translateY(-1px);box-shadow:0 12px 18px rgba(37,99,235,0.28)}
-.btn-outline{background:transparent;color:var(--ink);padding:0.75rem 1.65rem;border-radius:999px;font-size:0.9rem;font-weight:700;text-decoration:none;transition:all 0.25s;border:2px solid var(--border)}
-.btn-outline:hover{border-color:var(--accent);color:var(--accent)}
-.hero-visual{position:relative;display:flex;flex-direction:column;align-items:center;gap:1.2rem}
-.hero-card{background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:2.4rem 2.4rem 4.6rem;position:relative;overflow:visible;box-shadow:var(--shadow);animation:fadeUp 0.8s 0.1s ease-out both}
-.hero-card::before{content:'';position:absolute;top:-40px;right:-40px;width:120px;height:120px;background:var(--accent2);border-radius:50%}
-.avatar-ring{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--gold));display:flex;align-items:center;justify-content:center;margin-bottom:1rem;position:relative;z-index:1}
-.avatar-initials{font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:800;color:#fff}
-.avatar-img{width:100%;height:100%;border-radius:50%;object-fit:cover}
-.card-name{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:0.2rem}
-.card-title{font-size:0.82rem;color:var(--ink3);margin-bottom:1.2rem}
-.card-stats{display:grid;grid-template-columns:1fr 1fr;gap:0.8rem}
-.stat-box{background:var(--bg);border-radius:10px;padding:0.7rem;text-align:center}
-.stat-num{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700;color:var(--accent)}
-.stat-label{font-size:0.7rem;color:var(--ink3);margin-top:0.1rem}
-.hero-badge{position:absolute;bottom:16px;right:20px;background:var(--ink);color:#fff;padding:0.5rem 1rem;border-radius:50px;font-size:0.75rem;font-weight:500;display:flex;align-items:center;gap:0.4rem}
-.dot-green{width:8px;height:8px;background:#4ade80;border-radius:50%;display:inline-block}
+  .hamburger {
+    display: none;
+    flex-direction: column; gap: 5px;
+    cursor: pointer; background: none; border: none; padding: 4px;
+  }
+  .hamburger span {
+    display: block; width: 22px; height: 1.5px;
+    background: var(--ink); transition: all 0.3s;
+  }
+  .mobile-menu {
+    display: none;
+    position: fixed; top: 60px; left: 0; right: 0; z-index: 99;
+    background: var(--white);
+    border-bottom: 1px solid var(--rule);
+    padding: 1.5rem clamp(1.5rem, 5vw, 4rem);
+    flex-direction: column; gap: 1.2rem;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    font-size: 0.85rem; letter-spacing: 0.06em;
+    text-transform: uppercase; color: var(--ink-soft);
+    text-decoration: none;
+  }
+  .mobile-theme-toggle {
+    margin-top: 0.4rem;
+    width: fit-content;
+  }
 
-#about{background:linear-gradient(130deg, #f5f7fe 0%, #eff3ff 100%);border-top:1px solid var(--border);border-bottom:1px solid var(--border);background-image:none;}
-.section-label{font-size:0.75rem;font-weight:600;letter-spacing:0.12em;color:var(--accent);text-transform:uppercase;margin-bottom:0.8rem}
-h2{font-family:'Syne',sans-serif;font-size:2.2rem;font-weight:800;letter-spacing:-0.02em;color:var(--ink);margin-bottom:1.5rem}
-.about-grid{display:grid;grid-template-columns:3fr 2fr;gap:4rem;align-items:start}
-.about-text{font-size:1rem;color:var(--ink2);line-height:1.8;font-weight:300}
-.about-text p{margin-bottom:1rem}
-.about-highlights{display:flex;flex-direction:column;gap:1rem}
-.highlight-item{background:var(--bg);border-radius:12px;padding:1rem 1.2rem;border-left:3px solid var(--accent)}
-.highlight-item strong{font-family:'Syne',sans-serif;font-size:0.85rem;font-weight:700;color:var(--ink);display:block;margin-bottom:0.2rem}
-.highlight-item span{font-size:0.8rem;color:var(--ink3)}
+  /* ── LAYOUT ── */
+  main { padding-top: 60px; }
+  section { padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 4rem); }
+  .container { max-width: 860px; margin: 0 auto; }
+  .wide { max-width: 1040px; margin: 0 auto; }
 
-#skills{background:var(--bg)}
-.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
-.skill-card{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:1.5rem}
-.skill-icon{width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;font-size:1.2rem}
-.skill-icon.green{background:var(--accent2)}
-.skill-icon.gold{background:#fef3e2}
-.skill-icon.blue{background:#e8f0fe}
-.skill-card h3{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:700;margin-bottom:1rem;color:var(--ink)}
-.skill-tag{display:inline-block;background:var(--bg);border:1px solid var(--border);border-radius:50px;font-size:0.72rem;padding:0.25rem 0.7rem;margin:0.2rem;color:var(--ink2);font-weight:400}
-.skill-tag.learning{background:var(--accent2);border-color:var(--accent3);color:var(--accent)}
+  /* ── HERO ── */
+  #hero {
+    min-height: calc(100vh - 60px);
+    display: flex; align-items: center;
+    border-bottom: 1px solid var(--rule);
+    background:
+      linear-gradient(135deg, var(--hero-tint-1), var(--hero-tint-2)),
+      var(--surface-strong);
+  }
+  .hero-inner {
+    max-width: 1100px; margin: 0 auto; width: 100%;
+    padding: clamp(2rem, 5vw, 4rem) 0;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(280px, 360px);
+    gap: clamp(2.5rem, 5vw, 5rem);
+    align-items: center;
+  }
+  .hero-label {
+    font-size: 0.72rem; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--accent);
+    margin-bottom: 1.5rem;
+    display: flex; align-items: center; gap: 0.8rem;
+  }
+  .hero-label::before {
+    content: ''; display: inline-block;
+    width: 28px; height: 1px; background: var(--accent);
+  }
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.8rem, 7vw, 5.5rem);
+    font-weight: 600;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+    margin-bottom: 1.8rem;
+  }
+  h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+  .hero-bio {
+    font-size: clamp(1rem, 2.2vw, 1.15rem);
+    color: var(--ink-soft);
+    max-width: 600px;
+    line-height: 1.75;
+    margin-bottom: 2.5rem;
+  }
+  .hero-actions {
+    display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;
+  }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: var(--accent); color: var(--white);
+    padding: 0.75rem 1.6rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.8rem; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    text-decoration: none; border: 1.5px solid var(--accent);
+    transition: all 0.25s;
+    box-shadow: 0 18px 40px rgba(15,61,99,0.16);
+  }
+  .btn-primary:hover {
+    background: transparent; color: var(--accent);
+    box-shadow: none;
+  }
+  .btn-ghost {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: var(--ghost-bg); color: var(--ink);
+    padding: 0.75rem 1.6rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.8rem; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    text-decoration: none; border: 1.5px solid var(--rule);
+    transition: all 0.25s;
+  }
+  .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+  .hero-contacts {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--rule);
+    display: flex; flex-wrap: wrap; gap: 1.5rem 3rem;
+    font-size: 0.82rem; color: var(--ink-soft);
+  }
+  .hero-contacts a { color: inherit; text-decoration: none; }
+  .hero-contacts a:hover { color: var(--accent); }
+  .contact-item { display: flex; align-items: center; gap: 0.5rem; }
+  .hero-photo-panel {
+    position: relative;
+    background: var(--hero-panel-bg);
+    color: var(--white);
+    padding: 1.25rem;
+    border-radius: 28px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+  .hero-photo-panel::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, var(--hero-panel-glow), transparent 32%);
+    pointer-events: none;
+  }
+  .photo-frame {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    border-radius: 22px;
+    overflow: hidden;
+    background:
+      linear-gradient(160deg, rgba(255,255,255,0.18), rgba(255,255,255,0.06)),
+      linear-gradient(135deg, rgba(181,138,86,0.22), rgba(255,255,255,0.08));
+    border: 1px solid rgba(255,255,255,0.16);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .photo-frame.is-empty {
+    padding: 1.5rem;
+  }
+  .photo-placeholder {
+    text-align: center;
+    max-width: 220px;
+  }
+  .photo-monogram {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    margin: 0 auto 1rem;
+    background: rgba(255,255,255,0.14);
+    border: 1px solid rgba(255,255,255,0.18);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+  }
+  .photo-placeholder p {
+    font-size: 0.84rem;
+    color: rgba(255,255,255,0.76);
+    line-height: 1.7;
+  }
+  .photo-caption {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: 0.25rem 0.2rem 0;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.82);
+  }
+  .photo-caption strong {
+    display: block;
+    color: var(--white);
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
 
-#projects{background:var(--bg2);border-top:1px solid var(--border)}
-.projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;margin-top:2.5rem}
-.project-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:1.5rem;transition:transform 0.35s ease,box-shadow 0.35s ease,opacity 0.35s ease,background 0.35s ease;cursor:default;box-shadow:0 8px 20px rgba(15,23,42,0.06)}
-.project-card:hover{transform:translateY(-6px);box-shadow:0 16px 26px rgba(15,23,42,0.18);background:linear-gradient(145deg, #ffffff 0%, #eff4ff 100%);opacity:0.98}
-.project-type{font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);margin-bottom:0.6rem}
-.project-card h3{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin-bottom:0.6rem;color:var(--ink)}
-.project-card p{font-size:0.85rem;color:var(--ink2);line-height:1.6;font-weight:300;margin-bottom:1rem}
-.project-tags{display:flex;flex-wrap:wrap;gap:0.3rem}
-.ptag{background:var(--bg2);border:1px solid var(--border);border-radius:50px;font-size:0.7rem;padding:0.2rem 0.6rem;color:var(--ink3)}
-.coming-soon{opacity:0.65;border-style:dashed}
+  /* ── SECTION HEADERS ── */
+  .section-label {
+    font-size: 0.7rem; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--accent);
+    margin-bottom: 0.8rem;
+    display: flex; align-items: center; gap: 0.8rem;
+  }
+  .section-label::before {
+    content: ''; display: inline-block;
+    width: 20px; height: 1px; background: var(--accent);
+  }
+  h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.9rem, 4vw, 2.8rem);
+    font-weight: 600; letter-spacing: -0.02em;
+    line-height: 1.15; margin-bottom: 3rem;
+  }
 
-#certs{background:var(--bg);border-top:1px solid var(--border)}
-.certs-list{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:2.5rem}
-.cert-item{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1rem 1.2rem;display:flex;align-items:center;gap:1rem}
-.cert-dot{width:36px;height:36px;border-radius:10px;background:var(--accent2);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:0.9rem}
-.cert-name{font-size:0.85rem;font-weight:500;color:var(--ink)}
-.cert-org{font-size:0.75rem;color:var(--ink3);margin-top:0.1rem}
+  /* ── ABOUT ── */
+  #about { background: transparent; }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  .about-text p {
+    color: var(--ink-soft); font-size: 0.97rem;
+    margin-bottom: 1.2rem;
+  }
+  .about-stats {
+    display: flex; flex-direction: column; gap: 1.5rem;
+  }
+  .stat-card {
+    background: rgba(255,255,255,0.86);
+    border: 1px solid var(--rule);
+    padding: 1.4rem 1.6rem;
+    border-radius: 20px;
+    box-shadow: 0 16px 40px rgba(16, 40, 63, 0.06);
+  }
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem; font-weight: 600;
+    color: var(--accent-warm); line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+  .stat-label { font-size: 0.8rem; color: var(--ink-soft); letter-spacing: 0.03em; }
 
-#contact{background:linear-gradient(145deg, rgba(15,23,42,0.95), rgba(59,130,246,0.92));color:#ffffff;text-align:center;position:relative;padding:4rem 2rem;}
-#contact::before{content:'';position:absolute;inset:0;background:rgba(15,23,42,0.4);pointer-events:none;z-index:0;}
-#contact > .container{position:relative;z-index:1;}
-#contact .section-label{color:rgba(255,255,255,0.92)}
-.dark-mode h1{color:#e2e8f0}
-.dark-mode h1 em{color:var(--accent2)}
-.dark-mode .hero-sub{color:#cbd5e1}
-.dark-mode .hero-tag{background:rgba(59,130,246,0.2);border:1px solid rgba(59,130,246,0.45);color:var(--accent2)}
-.dark-mode .hero-tag::before{background:var(--accent2)}
-.dark-mode .nav-links a{color:#cbd5e1}
-.dark-mode .nav-links a:hover{color:var(--accent)}
-.dark-mode .nav-cta{background:var(--accent2)}
-.dark-mode .nav-cta:hover{background:var(--accent3)}
-.dark-mode .section-label{color:rgba(148,163,184,0.9)}
-.dark-mode h2{color:#e2e8f0}
-.dark-mode .about-text{color:#cbd5e1}
+  /* ── EXPERIENCE ── */
+  #experience { background: var(--surface-strong); border-top: 1px solid var(--rule); }
+  .exp-list { display: flex; flex-direction: column; gap: 0; }
+  .exp-item {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 2.5rem;
+    padding: 2.2rem 0;
+    border-bottom: 1px solid var(--rule);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  .exp-item.visible { opacity: 1; transform: translateY(0); }
+  .exp-meta { padding-top: 0.2rem; }
+  .exp-period {
+    font-size: 0.75rem; letter-spacing: 0.06em;
+    text-transform: uppercase; color: var(--accent);
+    margin-bottom: 0.4rem;
+  }
+  .exp-org {
+    font-size: 0.8rem; color: var(--ink-soft);
+  }
+  .exp-role {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem; font-weight: 400;
+    margin-bottom: 0.8rem; line-height: 1.25;
+  }
+  .exp-duties {
+    list-style: none; display: flex; flex-direction: column; gap: 0.5rem;
+  }
+  .exp-duties li {
+    font-size: 0.88rem; color: var(--ink-soft);
+    padding-left: 1rem; position: relative;
+  }
+  .exp-duties li::before {
+    content: '—'; position: absolute; left: 0;
+    color: var(--accent-light);
+  }
 
-.dark-mode #about{background:linear-gradient(130deg, #101a2d 0%, #162244 100%);border-top:1px solid rgba(75,97,128,0.6);border-bottom:1px solid rgba(75,97,128,0.6);}
-.dark-mode .section-label{color:rgba(148,163,184,0.94)}
-.dark-mode h2{color:#e2e8f0}
-.dark-mode .about-text{color:#cbd5e1}
-.dark-mode .highlight-item{background:#1b2a45;border-left-color:#3b82f6}
-.dark-mode .skill-tag{background:rgba(59,130,246,0.2);color:#e2e8f0;border-color:rgba(93,117,150,0.7)}
-.dark-mode .skill-tag.learning{background:rgba(37,99,235,0.25);color:#d1e8ff;border-color:rgba(37,99,235,0.7)}
-.dark-mode #skills,.dark-mode #projects,.dark-mode #certs{background:#0a1321}
-.dark-mode .skill-card,.dark-mode .project-card,.dark-mode .cert-item{background:#111f3a;border:1px solid rgba(70,95,132,0.7)}
-.dark-mode .btn-primary{background:var(--accent2);box-shadow:0 8px 16px rgba(59,130,246,0.32);}
-.dark-mode .btn-primary:hover{background:var(--accent3);box-shadow:0 8px 14px rgba(99,102,241,0.42);}
-.dark-mode .btn-outline{border-color:rgba(132,153,198,0.75);color:#e2e8f0}
-.dark-mode .btn-outline:hover{border-color:var(--accent);color:var(--accent)}
-.dark-mode .hero-card{background:#182944;border:1px solid rgba(75,97,132,0.75);box-shadow:0 18px 38px rgba(12,20,44,0.75)}
-.dark-mode .hero-card::before{background:rgba(59,130,246,0.4)}
-.dark-mode .hero-badge{background:#0f172a;color:#dbeafe}
-.dark-mode .project-card:hover{transform:translateY(-6px);box-shadow:0 16px 26px rgba(0,0,0,0.38);background:linear-gradient(145deg, rgba(35,58,94,0.75) 0%, rgba(25,40,70,0.75) 100%);opacity:0.98}
-.dark-mode .social-btn{background:rgba(59,130,246,0.35);color:#e2e8f0;border:none}
-.dark-mode .social-btn:hover{background:rgba(59,130,246,0.6);color:#fff}
-.dark-mode .contact-info{border-top:1px solid rgba(148,163,184,0.25)}
+  /* ── SKILLS ── */
+  #skills { background: transparent; border-top: 1px solid var(--rule); }
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  .skill-cell {
+    background: rgba(255,255,255,0.86);
+    padding: 1.3rem 1.4rem;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    display: flex; align-items: center; gap: 0.7rem;
+    transition: background 0.2s, color 0.2s;
+  }
+  .skill-cell:hover {
+    background: var(--accent-pale);
+    color: var(--accent);
+  }
+  .skill-dot {
+    width: 5px; height: 5px;
+    background: var(--accent); border-radius: 50%;
+    flex-shrink: 0;
+  }
 
-#contact h2{color:#fff;margin-bottom:1rem}
-#contact p{color:rgba(255,255,255,0.98);font-size:1rem;margin-bottom:2.5rem;font-weight:400;max-width:540px;margin-left:auto;margin-right:auto}
-.contact-links{display:flex;justify-content:center;gap:0.75rem;flex-wrap:wrap;position:relative;z-index:1}
-#contact::before{content:'';position:absolute;inset:0;background:rgba(15,23,42,0.35);pointer-events:none;z-index:0;}
-#contact > .container{position:relative;z-index:1;}
-#contact .contact-info{display:flex;justify-content:center;gap:2.5rem;margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.22);}
-#contact .ci-label{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.8);margin-bottom:0.3rem}
-#contact .ci-val{font-size:0.88rem;color:#fff}
-.contact-btn{color:#fff;border:1px solid rgba(255,255,255,0.8);}
-.contact-btn.email{background:rgba(255,255,255,0.18);border:1px solid rgba(255,255,255,0.9);color:#fff}
-.contact-btn.linkedin{background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.9);color:#fff}
-.contact-btn.linkedin:hover{background:rgba(255,255,255,0.25)}
-.contact-btn.whatsapp{background:#25d366;color:#fff;border:1px solid #ffffff}
-.social-links{display:flex;justify-content:center;gap:0.5rem;flex-wrap:wrap;margin:1rem 0}
-.social-btn{background:rgba(255,255,255,0.16);color:#fff;border:1px solid rgba(255,255,255,0.3);}
-.social-btn:hover{background:rgba(255,255,255,0.3);border-color:rgba(255,255,255,0.5);}
-.contact-info{display:flex;justify-content:center;gap:2.5rem;margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.2)}
-.ci-label{color:rgba(255,255,255,0.65)}
-.ci-val{color:#fff}
+  /* ── EDUCATION & CERT ── */
+  #education { background: var(--surface-strong); border-top: 1px solid var(--rule); }
+  .edu-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  .edu-card {
+    border: 1px solid var(--rule);
+    padding: 1.8rem 2rem;
+    background: linear-gradient(180deg, #f9fafc 0%, #eef2f6 100%);
+    border-radius: 22px;
+  }
+  .edu-tag {
+    font-size: 0.68rem; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--accent);
+    margin-bottom: 0.8rem;
+  }
+  .edu-degree {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem; font-weight: 400;
+    line-height: 1.3; margin-bottom: 0.5rem;
+  }
+  .edu-inst { font-size: 0.83rem; color: var(--ink-soft); }
 
-.contact-btn{display:inline-flex;align-items:center;gap:0.5rem;padding:0.7rem 1.5rem;border-radius:50px;font-size:0.85rem;font-weight:500;text-decoration:none;transition:all 0.2s}
-.contact-btn.email{background:var(--accent);color:#fff}
-.contact-btn.email:hover{background:#15593a}
-.contact-btn.linkedin{background:rgba(255,255,255,0.1);color:#fff;border:1px solid rgba(255,255,255,0.2)}
-.contact-btn.linkedin:hover{background:rgba(255,255,255,0.2)}
-.contact-btn.whatsapp{width:2.4rem;height:2.4rem;padding:0;display:flex;align-items:center;justify-content:center;background:#25d366;color:#fff;border:1px solid #1cbf4b;border-radius:50%}
-.contact-btn.whatsapp:hover{background:#1ebf57}
-.social-links{display:flex;justify-content:center;gap:0.5rem;flex-wrap:wrap;margin:1rem 0}
-.social-btn{width:2.4rem;height:2.4rem;display:flex;align-items:center;justify-content:center;background:var(--accent2);color:var(--ink);border:none;border-radius:50%;text-decoration:none;transition:background 0.2s,border-color 0.2s}
-.social-btn svg{width:1rem;height:1rem}
-.social-btn:hover{background:var(--accent3);border-color:var(--accent);color:#fff}
-.social-btn.whatsapp{background:var(--accent2);color:var(--ink);border:none;}
-.social-btn.whatsapp:hover{background:var(--accent3);border-color:var(--accent);color:#fff;}
-.contact-btn.linkedin:hover{background:rgba(255,255,255,0.2)}
-.contact-info{display:flex;justify-content:center;gap:2.5rem;margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.1)}
-.ci-item{text-align:center}
-.ci-label{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:0.3rem}
-.ci-val{font-size:0.88rem;color:rgba(255,255,255,0.8)}
+  /* ── CONTACT ── */
+  #contact {
+    background: var(--contact-bg);
+    color: var(--white);
+    border-top: 1px solid var(--rule);
+  }
+  #contact .section-label { color: var(--accent-light); }
+  #contact .section-label::before { background: var(--accent-light); }
+  #contact h2 { color: var(--white); margin-bottom: 1rem; }
+  .contact-sub {
+    color: rgba(255,255,255,0.5);
+    font-size: 0.95rem; margin-bottom: 3rem;
+  }
+  .contact-links {
+    display: flex; flex-direction: column; gap: 0;
+  }
+  .contact-row {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.3rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    text-decoration: none; color: inherit;
+    transition: padding-left 0.25s;
+    cursor: pointer;
+  }
+  .contact-row:hover { padding-left: 0.5rem; }
+  .contact-row-label {
+    font-size: 0.72rem; letter-spacing: 0.1em;
+    text-transform: uppercase; color: rgba(255,255,255,0.4);
+  }
+  .contact-row-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem; color: var(--white);
+  }
+  .contact-arrow { color: rgba(255,255,255,0.3); font-size: 1rem; }
+  .footer-note {
+    margin-top: 3rem;
+    font-size: 0.75rem; color: rgba(255,255,255,0.25);
+    letter-spacing: 0.05em;
+  }
 
-footer{background:var(--ink);border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 2rem;text-align:center}
-footer p{font-size:0.78rem;color:rgba(255,255,255,0.72);}
-footer span{color:rgba(229,231,235,0.8)}
-.dark-mode footer{background:#090f1f;border-top:1px solid rgba(148,163,184,0.3)}
-.dark-mode footer p{color:rgba(226,232,240,0.88);font-size:0.82rem}
-.dark-mode footer span{color:rgba(203,213,225,0.72)}
+  /* ── FADE IN ── */
+  .fade-in {
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
 
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
-@keyframes backgroundShift{0%{background-position:0% 35%}50%{background-position:100% 65%}100%{background-position:0% 35%}}
-@keyframes logoPulse{0%{transform:scale(0.96)}50%{transform:scale(1.06)}100%{transform:scale(1)}}
-@keyframes glowPulse{0%,100%{box-shadow:0 0 0 rgba(37,99,235,0.25)}50%{box-shadow:0 0 16px rgba(37,99,235,0.35)}}
+  /* ── RESPONSIVE ── */
+  @media (max-width: 700px) {
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .nav-controls { gap: 0.75rem; }
+    .theme-toggle-text { display: none; }
 
-.section-label, h2, .stat-box, .skill-card, .project-card, .cert-item, .contact-btn, .social-btn{opacity:1;transform:none;}
-.hero-btns a:hover{transform:translateY(-2px) translateZ(10px);}
-.project-card{transition:transform 0.35s ease,box-shadow 0.35s ease,opacity 0.35s ease,background 0.35s ease;transform-style:preserve-3d;}
-.project-card:hover{transform: translateY(-8px) translateZ(10px) rotateX(1deg);box-shadow:0 24px 32px rgba(15,23,42,0.28);}
+    .hero-grid { grid-template-columns: 1fr; }
+    .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .exp-item { grid-template-columns: 1fr; gap: 0.6rem; }
+    .edu-grid { grid-template-columns: 1fr; }
+    .hero-contacts { flex-direction: column; gap: 1rem; }
+    .photo-caption { flex-direction: column; }
 
-.hero-card:hover{animation:glowPulse 2.8s ease-in-out infinite;transform: perspective(800px) translateZ(12px) rotateX(1deg);}
+    h1 { font-size: clamp(2.2rem, 10vw, 3.5rem); }
+    h2 { font-size: clamp(1.6rem, 6vw, 2.2rem); }
 
-@media(max-width:768px){
-section{padding:4.5rem 1.5rem}
-nav{height:64px;padding:0 1rem}
-.nav-logo{font-size:1rem}
-.nav-links{display:none}
-.nav-cta{padding:0.5rem 1rem;font-size:0.8rem}
-#theme-toggle{padding:0.4rem 0.7rem;font-size:0.75rem;margin-left:0.5rem}
-.hero-grid,.about-grid{grid-template-columns:1fr;gap:2rem}
-h1{font-size:2.2rem;line-height:1.2}
-h2{font-size:1.8rem}
-.hero-sub{font-size:0.95rem}
-.hero-tag{font-size:0.7rem;padding:0.3rem 0.8rem}
-.btn-primary,.btn-outline{padding:0.65rem 1.5rem;font-size:0.85rem}
-.contact-links{gap:0.5rem;flex-direction:column}
-.contact-btn{width:100%;justify-content:center}
-.social-links{gap:0.4rem;margin:0.8rem 0}
-.skills-grid,.projects-grid{grid-template-columns:1fr}
-.certs-list{grid-template-columns:1fr}
-.contact-info{flex-direction:column;gap:1rem}
-.about-grid{grid-template-columns:1fr;gap:2rem}
-.about-highlights{gap:0.8rem}
-.hero-visual{display:flex}
-.hero-photo{width:130px;height:130px}
-.hero-row{grid-template-columns:1fr}
-.container{max-width:100%}
-.hero-card{padding:2rem 1.5rem 3.5rem}
-.card-stats{grid-template-columns:repeat(2,1fr);gap:0.6rem}
-.stat-box{padding:0.5rem}
-.stat-num{font-size:1.1rem}
-.stat-label{font-size:0.65rem}
-.avatar-ring{width:70px;height:70px}
-.avatar-img{border-radius:50%}
-.project-card:hover{transform:translateY(-4px)}
-.skill-card{padding:1.2rem}
-.skill-icon{width:36px;height:36px;margin-bottom:0.8rem}
-.highlight-item{padding:0.8rem 1rem}
-.ptag{font-size:0.65rem;padding:0.15rem 0.5rem}
-footer{padding:1.2rem 1rem}
-footer p{font-size:0.7rem}
-.hero-card::before{width:80px;height:80px;top:-20px;right:-20px}
-}
+    .skills-grid { grid-template-columns: 1fr 1fr; }
 
-@media(max-width:480px){
-section{padding:3.5rem 1rem}
-nav{height:60px;padding:0 0.75rem}
-.nav-logo{font-size:0.9rem}
-.nav-cta{padding:0.45rem 0.9rem;font-size:0.75rem}
-#theme-toggle{padding:0.4rem 0.6rem;font-size:0.7rem}
-h1{font-size:1.8rem}
-h2{font-size:1.5rem}
-.hero-sub{font-size:0.9rem}
-.button{font-size:0.8rem}
-.hero-tag{font-size:0.65rem}
-.contact-links{gap:0.4rem}
-.hero-card{padding:1.5rem 1.2rem 2.8rem}
-.card-stats{grid-template-columns:1fr;gap:0.5rem}
-.stat-box{padding:0.4rem}
-.avatar-ring{width:60px;height:60px}
-.avatar-img{border-radius:50%}
-.skill-grid{grid-template-columns:1fr}
-.project-card{padding:1.2rem}
-.cert-item{flex-direction:column;text-align:center;gap:0.75rem}
-.contact-info{padding-top:1rem}
-.contact-btn.email,.contact-btn.linkedin{font-size:0.8rem;padding:0.6rem 1rem}
-footer p{font-size:0.65rem}
-}
+    .contact-row-value { font-size: 0.92rem; }
+  }
 </style>
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
-  <div class="nav-logo">M<span>.</span>Antwi</div>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#certs">Certificates</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <a href="#contact" class="nav-cta">Hire Me</a>
-  <button id="theme-toggle" aria-label="Toggle dark mode" style="margin-left:0.75rem;padding:0.45rem 0.8rem;border-radius:999px;border:1px solid rgba(59,130,246,0.4);background:rgba(255,255,255,0.9);color:#1e3a8a;font-weight:700;cursor:pointer;transition:all 0.2s;">Dark Mode</button>
+  <a href="#hero" class="nav-name">Maclean O. Antwi</a>
+  <div class="nav-controls">
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+        <path d="M12 3v2.5M12 18.5V21M4.93 4.93l1.77 1.77M17.3 17.3l1.77 1.77M3 12h2.5M18.5 12H21M4.93 19.07l1.77-1.77M17.3 6.7l1.77-1.77"/>
+        <circle cx="12" cy="12" r="4.2"/>
+      </svg>
+      <span class="theme-toggle-text">Dark Mode</span>
+    </button>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
 
-<section id="home">
-  <div class="container">
-    <div class="hero-grid">
-      <div>
-        <div class="hero-tag">Available for opportunities</div>
-        <h1>IT Educator &<br><em>Tech Professional</em></h1>
-        <p class="hero-sub">BSc IT Education graduate, computing teacher, and aspiring data & cybersecurity professional based in Kumasi, Ghana. Passionate about continuous learning and growth.</p>
-        <div class="hero-btns">
-          <a href="#projects" class="btn-primary">View My Work</a>
-          <a href="#contact" class="btn-outline">Get In Touch</a>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <div class="hero-card">
-          <div class="avatar-ring"><img src="cdf69cd9-246f-4867-b6b4-6be48622b144.png" alt="Maclean Opoku Antwi" class="avatar-img"></div>
-          <div class="card-name">Maclean Opoku Antwi</div>
-          <div class="card-title">IT Educator · Aspiring Data Professional</div>
-          <div class="card-stats">
-            <div class="stat-box"><div class="stat-num">3+</div><div class="stat-label">Years Experience</div></div>
-            <div class="stat-box"><div class="stat-num">BSc</div><div class="stat-label">IT Education</div></div>
-            <div class="stat-box"><div class="stat-num">🚀</div><div class="stat-label">Career Growth</div></div>
-            <div class="stat-box"><div class="stat-num">GH</div><div class="stat-label">Kumasi, Ghana</div></div>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="closeMenu()">About</a>
+  <a href="#experience" onclick="closeMenu()">Experience</a>
+  <a href="#skills" onclick="closeMenu()">Skills</a>
+  <a href="#education" onclick="closeMenu()">Education</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+  <button class="theme-toggle mobile-theme-toggle" id="mobileThemeToggle" type="button" aria-label="Toggle color theme">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+      <path d="M12 3v2.5M12 18.5V21M4.93 4.93l1.77 1.77M17.3 17.3l1.77 1.77M3 12h2.5M18.5 12H21M4.93 19.07l1.77-1.77M17.3 6.7l1.77-1.77"/>
+      <circle cx="12" cy="12" r="4.2"/>
+    </svg>
+    <span class="theme-toggle-text">Dark Mode</span>
+  </button>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="container hero-inner">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="hero-label">IT Educator & Tech Professional — Kumasi, Ghana</div>
+          <h1>Maclean<br><em>Opoku Antwi</em></h1>
+          <p class="hero-bio">Computing teacher and IT support professional with experience across education and public sector environments. Passionate about technology, teaching, and building digital solutions that serve real communities.</p>
+          <div class="hero-actions">
+            <a href="#experience" class="btn-primary">View Experience ↓</a>
+            <a href="#contact" class="btn-ghost">Get in Touch</a>
           </div>
-          <div class="hero-badge"><span class="dot-green"></span> Open to work</div>
+          <div class="hero-contacts">
+            <div class="contact-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg>
+              <a href="mailto:opokuantwimaclan@gmail.com">opokuantwimaclan@gmail.com</a>
+            </div>
+            <div class="contact-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.39 19a19.45 19.45 0 0 1-5-5 19.79 19.79 0 0 1-2.93-8.4A2 2 0 0 1 5.44 3.5h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L9.91 11a16 16 0 0 0 5 5l.79-.79a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 17v-.08z"/></svg>
+              <span>+233 535 702 992</span>
+            </div>
+            <div class="contact-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Kumasi, Ghana</span>
+            </div>
+          </div>
         </div>
+        <aside class="hero-photo-panel fade-in" aria-label="Profile photo panel">
+          <div class="photo-frame is-empty">
+            <img src="maclean-photo.jpg" alt="Portrait of Maclean Opoku Antwi" onload="this.parentElement.classList.remove('is-empty')" onerror="this.remove()">
+            <div class="photo-placeholder">
+              <div class="photo-monogram">MO</div>
+              <p>Add your professional headshot as <strong style="color:#fff;font-weight:600;">maclean-photo.jpg</strong> in the same folder and it will appear here automatically.</p>
+            </div>
+          </div>
+          <div class="photo-caption">
+            <div>
+              <strong>Professional Profile</strong>
+              Educator, IT support specialist, and digital problem-solver
+            </div>
+            <div>Available for teaching, support, and project collaborations</div>
+          </div>
+        </aside>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="about">
-  <div class="container">
-    <div class="section-label">About Me</div>
-    <div class="about-grid">
-      <div>
-        <h2>Technology meets<br>teaching.</h2>
-        <div class="about-text">
-          <p>I'm Maclean — an IT Education graduate and computing teacher with hands-on experience in IT support, digital systems, and end-user training across educational and public sector environments.</p>
-          <p>My work sits at the intersection of technology and education. I don't just understand IT systems — I know how to break them down and make them accessible to others. Currently, I'm building expertise in data analysis, cybersecurity, and web development.</p>
-          <p>I'm actively preparing for postgraduate study in the United Kingdom, with a focus on Data Science or Advanced Computing. When I'm not teaching or learning, you'll find me behind a drum kit, serving as a drummer at my local church.</p>
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-label">About</div>
+      <div class="about-grid">
+        <div class="about-text fade-in">
+          <h2>A blend of <em style="font-style:italic;font-family:'Cormorant Garamond',serif;">education</em> and technology</h2>
+          <p>I hold a BSc in Information Technology Education from the University of Education, Winneba — a degree that uniquely bridges the technical and the pedagogical. I don't just understand technology; I can communicate it clearly to others.</p>
+          <p>Currently serving as a Computing Teacher at Humpty Dumpty School in Kumasi, I combine classroom instruction with hands-on IT support, ensuring that technology serves the people who use it, not the other way around.</p>
+          <p>My background spans public sector IT support, ICT laboratory management, and independent web development — including building web applications to address real-world challenges like youth employment.</p>
         </div>
-      </div>
-      <div class="about-highlights">
-        <div class="highlight-item">
-          <strong>Education</strong>
-          <span>BSc IT Education · University of Education, Winneba</span>
-        </div>
-        <div class="highlight-item">
-          <strong>Current Role</strong>
-          <span>Computing Teacher · Humpty Dumpty School, Kumasi</span>
-        </div>
-        <div class="highlight-item">
-          <strong>Interests</strong>
-          <span>Cybersecurity · UI/UX · Web Dev · Digital Marketing</span>
-        </div>
-        <div class="highlight-item">
-          <strong>NTC Certified</strong>
-          <span>Ghana Teacher Licensing Examination (GTLE)</span>
+        <div class="about-stats fade-in">
+          <div class="stat-card">
+            <div class="stat-num">3+</div>
+            <div class="stat-label">Years of professional IT & teaching experience</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">2</div>
+            <div class="stat-label">Sectors served — Education & Public Administration</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">BSc</div>
+            <div class="stat-label">Information Technology Education, UEW</div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="skills">
-  <div class="container">
-    <div class="section-label">What I Know</div>
-    <h2>Skills & tools.</h2>
-    <div class="skills-grid">
-      <div class="skill-card">
-        <div class="skill-icon green">💻</div>
-        <h3>IT & Technical</h3>
-        <div>
-          <span class="skill-tag">Hardware Support</span>
-          <span class="skill-tag">Windows OS</span>
-          <span class="skill-tag">Software Config</span>
-          <span class="skill-tag">Networking Basics</span>
-          <span class="skill-tag">IT Helpdesk</span>
-          <span class="skill-tag">System Maintenance</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon gold">📊</div>
-        <h3>Productivity & Data</h3>
-        <div>
-          <span class="skill-tag">Microsoft Office</span>
-          <span class="skill-tag">Google Workspace</span>
-          <span class="skill-tag">Data Entry</span>
-          <span class="skill-tag">Digital Records</span>
-          <span class="skill-tag learning">Excel (Advanced)</span>
-          <span class="skill-tag learning">Python · Learning</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon blue">🎓</div>
-        <h3>Teaching & Communication</h3>
-        <div>
-          <span class="skill-tag">ICT Instruction</span>
-          <span class="skill-tag">Lesson Planning</span>
-          <span class="skill-tag">Curriculum Design</span>
-          <span class="skill-tag">Classroom Mgmt</span>
-          <span class="skill-tag">Tech Documentation</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon green">🔐</div>
-        <h3>Cybersecurity</h3>
-        <div>
-          <span class="skill-tag">Info Security Awareness</span>
-          <span class="skill-tag">Data Confidentiality</span>
-          <span class="skill-tag learning">Cisco NetAcad · Learning</span>
-          <span class="skill-tag learning">TryHackMe · Learning</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon gold">🎨</div>
-        <h3>UI/UX & Design</h3>
-        <div>
-          <span class="skill-tag learning">Figma · Learning</span>
-          <span class="skill-tag learning">Web Design · Learning</span>
-          <span class="skill-tag">Canva</span>
-          <span class="skill-tag learning">Prototyping · Learning</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon blue">🌐</div>
-        <h3>Web Development</h3>
-        <div>
-          <span class="skill-tag learning">HTML · Learning</span>
-          <span class="skill-tag learning">CSS · Learning</span>
-          <span class="skill-tag learning">JavaScript · Learning</span>
-          <span class="skill-tag learning">GitHub Pages · Learning</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-label">Experience</div>
+      <h2>Where I've <em style="font-style:italic;font-family:'Cormorant Garamond',serif;">worked</em></h2>
+      <div class="exp-list">
 
-<section id="projects">
-  <div class="container">
-    <div class="section-label">My Work</div>
-    <h2>Projects.</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <div class="project-type">Education & Teaching</div>
-        <h3>ICT Curriculum Delivery</h3>
-        <p>Designed and delivered computing lessons to basic school pupils covering internet safety, Microsoft Office, and introductory programming concepts. Adapted content for varying abilities and limited resources.</p>
-        <div class="project-tags">
-          <span class="ptag">Lesson Planning</span>
-          <span class="ptag">ICT Instruction</span>
-          <span class="ptag">Curriculum Design</span>
+        <div class="exp-item">
+          <div class="exp-meta">
+            <div class="exp-period">2024 — Present</div>
+            <div class="exp-org">Humpty Dumpty School</div>
+          </div>
+          <div class="exp-body">
+            <div class="exp-role">Computing Teacher & IT Support</div>
+            <ul class="exp-duties">
+              <li>Provide technical support to staff and students on hardware, software, and connectivity issues</li>
+              <li>Install, configure, and maintain computers and digital learning tools</li>
+              <li>Troubleshoot system issues to minimise downtime during academic activities</li>
+              <li>Maintain digital academic records and ensure proper system usage</li>
+              <li>Support safe and secure use of IT systems within the school environment</li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <div class="project-card">
-        <div class="project-type">IT Support</div>
-        <h3>National Service — IT Support Officer</h3>
-        <p>Provided first-level technical support at the Office of the Administrator of Stool Lands. Handled hardware, software, and network issues while maintaining data security and digital filing systems.</p>
-        <div class="project-tags">
-          <span class="ptag">Hardware/Software</span>
-          <span class="ptag">IT Support</span>
-          <span class="ptag">Data Management</span>
-        </div>
-      </div>
-      <div class="project-card">
-        <div class="project-type">Web Development</div>
-        <h3>Personal Portfolio Website</h3>
-        <p>Designed and built this personal portfolio site to showcase professional background, skills, and career goals to prospective employers and clients.</p>
-        <div class="project-tags">
-          <span class="ptag">HTML/CSS</span>
-          <span class="ptag">GitHub Pages</span>
-          <span class="ptag">Personal Branding</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section id="certs">
-  <div class="container">
-    <div class="section-label">Credentials</div>
-    <h2>Certificates.</h2>
-    <div class="certs-list">
-      <div class="cert-item">
-        <div class="cert-dot">🏛️</div>
-        <div>
-          <div class="cert-name">GTLE — Teacher Licensing Certificate</div>
-          <div class="cert-org">National Teaching Council (NTC) · Ghana</div>
+        <div class="exp-item">
+          <div class="exp-meta">
+            <div class="exp-period">2023 — 2024</div>
+            <div class="exp-org">Office of the Administrator of Stool Lands</div>
+          </div>
+          <div class="exp-body">
+            <div class="exp-role">IT Support — National Service</div>
+            <ul class="exp-duties">
+              <li>Delivered first-level technical support for hardware, software, and system-related issues</li>
+              <li>Installed and configured desktop computers, printers, and peripheral devices</li>
+              <li>Maintained digital filing systems and supported data entry processes</li>
+              <li>Performed routine system checks and resolved technical issues promptly</li>
+              <li>Ensured confidentiality, integrity, and proper handling of institutional data</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-meta">
+            <div class="exp-period">2022 — 2023</div>
+            <div class="exp-org">Kumasi High School</div>
+          </div>
+          <div class="exp-body">
+            <div class="exp-role">ICT Intern Teacher</div>
+            <ul class="exp-duties">
+              <li>Assisted in managing the ICT laboratory and maintaining computer systems</li>
+              <li>Set up devices and supported students and staff with technical troubleshooting</li>
+              <li>Conducted routine maintenance checks to ensure functionality of IT equipment</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-label">Skills</div>
+      <h2>Core <em style="font-style:italic;font-family:'Cormorant Garamond',serif;">competencies</em></h2>
+      <div class="skills-grid fade-in">
+        <div class="skill-cell"><div class="skill-dot"></div>Hardware Installation & Troubleshooting</div>
+        <div class="skill-cell"><div class="skill-dot"></div>Software Installation & Configuration</div>
+        <div class="skill-cell"><div class="skill-dot"></div>Windows OS Support</div>
+        <div class="skill-cell"><div class="skill-dot"></div>Network & Connectivity Support</div>
+        <div class="skill-cell"><div class="skill-dot"></div>Microsoft Office Suite</div>
+        <div class="skill-cell"><div class="skill-dot"></div>Google Workspace</div>
+        <div class="skill-cell"><div class="skill-dot"></div>IT Helpdesk & End-User Support</div>
+        <div class="skill-cell"><div class="skill-dot"></div>System Maintenance & Updates</div>
+        <div class="skill-cell"><div class="skill-dot"></div>Device Setup & Configuration</div>
+        <div class="skill-cell"><div class="skill-dot"></div>Digital Records Management</div>
+        <div class="skill-cell"><div class="skill-dot"></div>Information Security Awareness</div>
+        <div class="skill-cell"><div class="skill-dot"></div>Web Development (HTML/CSS/JS)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="container">
+      <div class="section-label">Education & Certification</div>
+      <h2>Academic <em style="font-style:italic;font-family:'Cormorant Garamond',serif;">background</em></h2>
+      <div class="edu-grid fade-in">
+        <div class="edu-card">
+          <div class="edu-tag">Degree</div>
+          <div class="edu-degree">BSc Information Technology Education</div>
+          <div class="edu-inst">University of Education, Winneba</div>
+        </div>
+        <div class="edu-card">
+          <div class="edu-tag">Professional Certification</div>
+          <div class="edu-degree">GTLE Certificate</div>
+          <div class="edu-inst">National Teaching Council (NTC), Ghana</div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="contact">
-  <div class="container">
-    <div class="section-label">Get In Touch</div>
-    <h2>Let's connect.</h2>
-    <p>Open to IT roles, data opportunities, remote work, and EdTech projects. Feel free to reach out.</p>
-    <div class="contact-links">
-      <a href="mailto:opokuantwimaclan@gmail.com" class="contact-btn email">&#x2709;&#xFE0F; opokuantwimaclan@gmail.com</a>
-      <a href="https://linkedin.com/in/macleanopoku" class="contact-btn linkedin">LinkedIn Profile</a>
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-label">Contact</div>
+      <h2>Let's <em style="font-style:italic;font-family:'Cormorant Garamond',serif;">connect</em></h2>
+      <p class="contact-sub">Open to new opportunities, collaborations, and conversations.</p>
+      <div class="contact-links">
+        <a href="mailto:opokuantwimaclan@gmail.com" class="contact-row">
+          <div>
+            <div class="contact-row-label">Email</div>
+            <div class="contact-row-value">opokuantwimaclan@gmail.com</div>
+          </div>
+          <div class="contact-arrow">→</div>
+        </a>
+        <div class="contact-row">
+          <div>
+            <div class="contact-row-label">Phone</div>
+            <div class="contact-row-value">+233 535 702 992</div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div>
+            <div class="contact-row-label">Location</div>
+            <div class="contact-row-value">Kumasi, Ashanti, Ghana</div>
+          </div>
+        </div>
+      </div>
+      <p class="footer-note">© 2025 Maclean Opoku Antwi — All rights reserved</p>
     </div>
-    <div class="social-links">
-      <a href="https://github.com/macleanopoku" class="social-btn" target="_blank" rel="noreferrer" aria-label="GitHub">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297a12 12 0 00-3.792 23.397c.6.111.82-.261.82-.58 0-.288-.011-1.05-.016-2.06-3.338.725-4.042-1.614-4.042-1.614-.546-1.388-1.332-1.758-1.332-1.758-1.088-.744.083-.729.083-.729 1.204.085 1.837 1.236 1.837 1.236 1.07 1.835 2.805 1.305 3.492.998.108-.776.418-1.305.76-1.605-2.665-.303-5.467-1.333-5.467-5.93 0-1.31.468-2.381 1.235-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.3 1.23a11.52 11.52 0 016.003 0c2.29-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.233 1.911 1.233 3.221 0 4.61-2.807 5.624-5.48 5.921.43.372.814 1.103.814 2.223 0 1.604-.015 2.896-.015 3.287 0 .32.218.694.825.576A12.005 12.005 0 0012 .297"/></svg>
-      </a>
-      <a href="https://x.com/macleanopoku" class="social-btn" target="_blank" rel="noreferrer" aria-label="X">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M23.77 1.1a1.414 1.414 0 0 0-2 0L12 10.87 2.24 1.1a1.414 1.414 0 0 0-2 2L10.87 12 0.24 22.63a1.414 1.414 0 1 0 2 2L12 13.13l9.76 9.5a1.414 1.414 0 0 0 2-2L13.13 12l9.64-8.9a1.414 1.414 0 0 0 0-2z"/></svg>
-      </a>
-      <a href="https://facebook.com/macleanopoku" class="social-btn" target="_blank" rel="noreferrer" aria-label="Facebook">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M22.675 0h-21.35C.6 0 0 .6 0 1.326v21.348C0 23.4.6 24 1.326 24h11.495v-9.294H9.691v-3.622h3.13V8.413c0-3.1 1.894-4.788 4.66-4.788 1.325 0 2.462.099 2.794.143v3.24l-1.918.001c-1.504 0-1.796.716-1.796 1.765v2.316h3.587l-.467 3.622h-3.12V24h6.116C23.4 24 24 23.4 24 22.674V1.326C24 .6 23.4 0 22.675 0z"/></svg>
-      </a>
-      <a href="https://wa.me/233535702992" class="social-btn whatsapp" target="_blank" rel="noreferrer" aria-label="WhatsApp">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.472-.148-.672.149-.199.297-.767.967-.94 1.165-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.786-1.48-1.755-1.653-2.052-.173-.297-.018-.458.13-.606.134-.133.3-.347.448-.521.149-.174.198-.298.298-.497.099-.199.05-.373-.025-.522-.074-.149-.672-1.612-.92-2.207-.242-.579-.487-.5-.672-.51l-.572-.01c-.199 0-.522.074-.795.373s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.199 2.095 3.2 5.082 4.487.71.306 1.263.489 1.694.626.712.227 1.36.195 1.872.118.571-.088 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.199-.57-.347z"/><path d="M12.004 2.003C6.478 2.003 2 6.483 2 12.01c0 2.114.642 4.09 1.75 5.754L2 22l4.39-1.15A10.011 10.011 0 0012.004 22c5.525 0 10.004-4.48 10.004-9.99C22.008 6.484 17.524 2.003 12.004 2.003zm0 18.471a8.75 8.75 0 01-4.713-1.33l-.337-.201-2.633.69.703-2.57-.217-.35a8.749 8.749 0 011.314-9.531 8.78 8.78 0 012.567-2.04 8.75 8.75 0 019.452 1.144 8.727 8.727 0 012.03 2.523 8.776 8.776 0 01-1.17 9.426 8.78 8.78 0 01-5.979 3.269 8.66 8.66 0 01-1.92.1z"/></svg>
-      </a>
-    </div>
-    <div class="contact-info">
-      <div class="ci-item"><div class="ci-label">Location</div><div class="ci-val">Kumasi, Ghana</div></div>
-      <div class="ci-item"><div class="ci-label">Phone</div><div class="ci-val">+233 535 702 992</div></div>
-      <div class="ci-item"><div class="ci-label">Open To</div><div class="ci-val">Remote & On-site</div></div>
-      <div class="ci-item"><div class="ci-label">Status</div><div class="ci-val">Available Now</div></div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  <p>© 2025 <span>Maclean Opoku Antwi</span> · IT Educator & Aspiring Data Professional · Kumasi, Ghana<br>
-  <span style="font-size:0.72rem;opacity:0.5">Built with purpose. Growing every day.</span></p>
-</footer>
+</main>
 
 <script>
-  const themeToggle = document.getElementById('theme-toggle');
-  const setTheme = mode => {
-    document.documentElement.classList.toggle('dark-mode', mode === 'dark');
-    themeToggle.textContent = mode === 'dark' ? 'Light Mode' : 'Dark Mode';
-    localStorage.setItem('theme', mode);
-  };
-  const storedTheme = localStorage.getItem('theme');
-  if (storedTheme === 'dark') setTheme('dark');
-  else setTheme('light');
-  themeToggle.addEventListener('click', () => {
-    const next = document.documentElement.classList.contains('dark-mode') ? 'light' : 'dark';
-    setTheme(next);
+  const storedTheme = localStorage.getItem('portfolio-theme');
+  const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const initialTheme = storedTheme || (systemPrefersDark ? 'dark' : 'light');
+  document.body.dataset.theme = initialTheme;
+
+  const themeToggle = document.getElementById('themeToggle');
+  const mobileThemeToggle = document.getElementById('mobileThemeToggle');
+  const themeLabels = document.querySelectorAll('.theme-toggle-text');
+
+  function syncThemeButtons(theme) {
+    const nextMode = theme === 'dark' ? 'Light Mode' : 'Dark Mode';
+    themeLabels.forEach(label => {
+      label.textContent = nextMode;
+    });
+    [themeToggle, mobileThemeToggle].forEach(button => {
+      button.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+    });
+  }
+
+  function setTheme(theme) {
+    document.body.dataset.theme = theme;
+    localStorage.setItem('portfolio-theme', theme);
+    syncThemeButtons(theme);
+  }
+
+  function toggleTheme() {
+    const nextTheme = document.body.dataset.theme === 'dark' ? 'light' : 'dark';
+    setTheme(nextTheme);
+  }
+
+  syncThemeButtons(initialTheme);
+  themeToggle.addEventListener('click', toggleTheme);
+  mobileThemeToggle.addEventListener('click', toggleTheme);
+
+  // Hamburger
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+  });
+  function closeMenu() { mobileMenu.classList.remove('open'); }
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.fade-in, .exp-item').forEach(el => observer.observe(el));
+
+  // Stagger exp items
+  document.querySelectorAll('.exp-item').forEach((el, i) => {
+    el.style.transitionDelay = `${i * 0.08}s`;
   });
 </script>
 
