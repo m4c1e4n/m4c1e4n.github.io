@@ -383,6 +383,915 @@
 
   /* ── EXPERIENCE ── */
   #experience { background: var(--surface-strong); border-top: 1px solid var(--rule); }
+  .exp-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .exp-item {
+    display: grid;
+    grid-template-columns: minmax(150px, 180px) 1fr;
+    gap: 2rem;
+    padding: 1.6rem;
+    border: 1px solid var(--rule);
+    border-radius: 24px;
+    background: color-mix(in srgb, var(--surface) 76%, var(--surface-strong));
+    box-shadow: 0 14px 36px rgba(16, 40, 63, 0.05);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+  .exp-item.visible { opacity: 1; transform: translateY(0); }
+  .exp-item:hover {
+    border-color: color-mix(in srgb, var(--accent) 24%, var(--rule));
+    box-shadow: 0 22px 48px rgba(16, 40, 63, 0.08);
+  }
+  .exp-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: flex-start;
+  }
+  .exp-period {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.42rem 0.72rem;
+    border-radius: 999px;
+    background: var(--accent-pale);
+    color: var(--accent);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .exp-org {
+    font-size: 0.84rem;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+  .exp-body {
+    display: grid;
+    gap: 1rem;
+  }
+  .exp-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 1rem;
+  }
+  .exp-role {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.1;
+    margin: 0;
+  }
+  .exp-tag {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.4rem 0.72rem;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    color: var(--ink-soft);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .exp-summary {
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+    line-height: 1.7;
+  }
+  .exp-duties {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem 1.2rem;
+    padding-top: 0.2rem;
+  }
+  .exp-duties li {
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+    padding: 0.95rem 1rem 0.95rem 2.1rem;
+    position: relative;
+    border: 1px solid color-mix(in srgb, var(--rule) 78%, transparent);
+    border-radius: 18px;
+    background: color-mix(in srgb, var(--surface-strong) 88%, transparent);
+    line-height: 1.6;
+  }
+  .exp-duties li::before {
+    content: '';
+    position: absolute;
+    left: 1rem;
+    top: 1.3rem;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent-warm);
+  }
+
+  /* ── SKILLS ── */
+  #skills { background: transparent; border-top: 1px solid var(--rule); }
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  .skill-cell {
+    background: rgba(255,255,255,0.86);
+    padding: 1.3rem 1.4rem;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    display: flex; align-items: center; gap: 0.7rem;
+    transition: background 0.2s, color 0.2s;
+  }
+  .skill-cell:hover {
+    background: var(--accent-pale);
+    color: var(--accent);
+  }
+  .skill-dot {
+    width: 5px; height: 5px;
+    background: var(--accent); border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ── EDUCATION & CERT ── */
+  #education { background: var(--surface-strong); border-top: 1px solid var(--rule); }
+  .edu-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  .edu-card {
+    border: 1px solid var(--rule);
+    padding: 1.8rem 2rem;
+    background: linear-gradient(180deg, #f9fafc 0%, #eef2f6 100%);
+    border-radius: 22px;
+  }
+  .edu-tag {
+    font-size: 0.68rem; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--accent);
+    margin-bottom: 0.8rem;
+  }
+  .edu-degree {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem; font-weight: 400;
+    line-height: 1.3; margin-bottom: 0.5rem;
+  }
+  .edu-inst { font-size: 0.83rem; color: var(--ink-soft); }
+
+  /* ── CONTACT ── */
+  #contact {
+    background: var(--contact-bg);
+    color: var(--white);
+    border-top: 1px solid var(--rule);
+  }
+  #contact .section-label { color: var(--accent-light); }
+  #contact .section-label::before { background: var(--accent-light); }
+  #contact h2 { color: var(--white); margin-bottom: 1rem; }
+  .contact-sub {
+    color: rgba(255,255,255,0.5);
+    font-size: 0.95rem; margin-bottom: 3rem;
+  }
+  .contact-links {
+    display: flex; flex-direction: column; gap: 0;
+  }
+  .contact-row {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.3rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    text-decoration: none; color: inherit;
+    transition: padding-left 0.25s;
+    cursor: pointer;
+  }
+  .contact-row:hover { padding-left: 0.5rem; }
+  .contact-row-label {
+    font-size: 0.72rem; letter-spacing: 0.1em;
+    text-transform: uppercase; color: rgba(255,255,255,0.4);
+  }
+  .contact-row-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem; color: var(--white);
+  }
+  .contact-arrow { color: rgba(255,255,255,0.3); font-size: 1rem; }
+  .footer-note {
+    margin-top: 3rem;
+    font-size: 0.75rem; color: rgba(255,255,255,0.25);
+    letter-spacing: 0.05em;
+  }
+
+  /* ── FADE IN ── */
+  .fade-in {
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 700px) {
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .nav-controls { gap: 0.75rem; }
+    .theme-toggle-text { display: none; }
+
+    .hero-grid { grid-template-columns: 1fr; }
+    .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .exp-item { grid-template-columns: 1fr; gap: 1rem; padding: 1.25rem; }
+    .exp-head { flex-direction: column; }
+    .exp-duties { grid-template-columns: 1fr; }
+    .edu-grid { grid-template-columns: 1fr; }
+    .hero-contacts { flex-direction: column; gap: 1rem; }
+    .photo-caption { flex-direction: column; }
+
+    h1 { font-size: clamp(2.2rem, 10vw, 3.5rem); }
+    h2 { font-size: clamp(1.6rem, 6vw, 2.2rem); }
+
+    .skills-grid { grid-template-columns: 1fr 1fr; }
+
+    .contact-row-value { font-size: 0.92rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-name">Maclean O. Antwi</a>
+  <div class="nav-controls">
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+        <path d="M12 3v2.5M12 18.5V21M4.93 4.93l1.77 1.77M17.3 17.3l1.77 1.77M3 12h2.5M18.5 12H21M4.93 19.07l1.77-1.77M17.3 6.7l1.77-1.77"/>
+        <circle cx="12" cy="12" r="4.2"/>
+      </svg>
+      <span class="theme-toggle-text">Dark Mode</span>
+    </button>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="closeMenu()">About</a>
+  <a href="#experience" onclick="closeMenu()">Experience</a>
+  <a href="#skills" onclick="closeMenu()">Skills</a>
+  <a href="#education" onclick="closeMenu()">Education</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+  <button class="theme-toggle mobile-theme-toggle" id="mobileThemeToggle" type="button" aria-label="Toggle color theme">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+      <path d="M12 3v2.5M12 18.5V21M4.93 4.93l1.77 1.77M17.3 17.3l1.77 1.77M3 12h2.5M18.5 12H21M4.93 19.07l1.77-1.77M17.3 6.7l1.77-1.77"/>
+      <circle cx="12" cy="12" r="4.2"/>
+    </svg>
+    <span class="theme-toggle-text">Dark Mode</span>
+  </button>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="container hero-inner">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="hero-label">IT Educator & Tech Professional — Kumasi, Ghana</div>
+          <h1>Maclean<br><em>Opoku Antwi</em></h1>
+          <p class="hero-bio">Computing teacher and IT support professional with experience across education and public sector environments. Passionate about technology, teaching, and building digital solutions that serve real communities.</p>
+          <div class="hero-actions">
+            <a href="#experience" class="btn-primary">View Experience ↓</a>
+            <a href="#contact" class="btn-ghost">Get in Touch</a>
+          </div>
+          <div class="hero-contacts">
+            <div class="contact-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg>
+              <a href="mailto:opokuantwimaclan@gmail.com">opokuantwimaclan@gmail.com</a>
+            </div>
+            <div class="contact-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.39 19a19.45 19.45 0 0 1-5-5 19.79 19.79 0 0 1-2.93-8.4A2 2 0 0 1 5.44 3.5h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L9.91 11a16 16 0 0 0 5 5l.79-.79a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 17v-.08z"/></svg>
+              <span>+233 535 702 992</span>
+            </div>
+            <div class="contact-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Kumasi, Ghana</span>
+            </div>
+          </div>
+        </div>
+        <aside class="hero-photo-panel fade-in" aria-label="Profile photo panel">
+          <div class="photo-frame is-empty">
+            <img src="maclean-photo.jpg" alt="Portrait of Maclean Opoku Antwi" onload="this.parentElement.classList.remove('is-empty')" onerror="this.remove()">
+            <div class="photo-placeholder">
+              <div class="photo-monogram">MO</div>
+              <p>Add your professional headshot as <strong style="color:#fff;font-weight:600;">maclean-photo.jpg</strong> in the same folder and it will appear here automatically.</p>
+            </div>
+          </div>
+          <div class="photo-caption">
+            <div>
+              <strong>Professional Profile</strong>
+              Educator, IT support specialist, and digital problem-solver
+            </div>
+            <div>Available for teaching, support, and project collaborations</div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-label">About</div>
+      <div class="about-grid">
+        <div class="about-text fade-in">
+          <h2>A blend of <em style="font-style:italic;font-family:'Cormorant Garamond',serif;">education</em> and technology</h2>
+          <p>I hold a BSc in Information Technology Education from the University of Education, Winneba — a degree that uniquely bridges the technical and the pedagogical. I don't just understand technology; I can communicate it clearly to others.</p>
+          <p>Currently serving as a Computing Teacher at Humpty Dumpty School in Kumasi, I combine classroom instruction with hands-on IT support, ensuring that technology serves the people who use it, not the other way around.</p>
+          <p>My background spans public sector IT support, ICT laboratory management, and independent web development — including building web applications to address real-world challenges like youth employment.</p>
+        </div>
+        <div class="about-stats fade-in">
+          <div class="stat-card">
+            <div class="stat-num">3+</div>
+            <div class="stat-label">Years of professional IT & teaching experience</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">2</div>
+            <div class="stat-label">Sectors served — Education & Public Administration</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">BSc</div>
+            <div class="stat-label">Information Technology Education, UEW</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-label">Experience</div>
+      <h2>Where I've <em style="font-style:italic;font-family:'Cormorant Garamond',serif;">worked</em></h2>
+      <div class="exp-list">
+
+        <div class="exp-item">
+          <div class="exp-meta">
+            <div class="exp-period">2024 — Present</div>
+            <div class="exp-org">Humpty Dumpty School</div>
+          </div>
+          <div class="exp-body">
+            <div class="exp-head">
+              <div class="exp-role">Computing Teacher & IT Support</div>
+              <div class="exp-tag">Current Role</div>
+            </div>
+            <p class="exp-summary">Teaching computing while supporting the school’s day-to-day technology operations, with a focus on reliable systems and practical digital learning.</p>
+            <ul class="exp-duties">
+              <li>Provide technical support to staff and students on hardware, software, and connectivity issues</li>
+              <li>Install, configure, and maintain computers and digital learning tools</li>
+              <li>Troubleshoot system issues to minimise downtime during academic activities</li>
+              <li>Maintain digital academic records and ensure proper system usage</li>
+              <li>Support safe and secure use of IT systems within the school environment</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-meta">
+            <div class="exp-period">2023 — 2024</div>
+            <div class="exp-org">Office of the Administrator of Stool Lands</div>
+          </div>
+          <div class="exp-body">
+            <div class="exp-head">
+              <div class="exp-role">IT Support — National Service</div>
+              <div class="exp-tag">Public Sector</div>
+            </div>
+            <p class="exp-summary">Supported internal technology operations and digital record processes in a public administration environment where stability, speed, and confidentiality mattered.</p>
+            <ul class="exp-duties">
+              <li>Delivered first-level technical support for hardware, software, and system-related issues</li>
+              <li>Installed and configured desktop computers, printers, and peripheral devices</li>
+              <li>Maintained digital filing systems and supported data entry processes</li>
+              <li>Performed routine system checks and resolved technical issues promptly</li>
+              <li>Ensured confidentiality, integrity, and proper handling of institutional data</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-meta">
+            <div class="exp-period">2022 — 2023</div>
+            <div class="exp-org">Kumasi High School</div>
+          </div>
+          <div class="exp-body">
+            <div class="exp-head">
+              <div class="exp-role">ICT Intern Teacher</div>
+              <div class="exp-tag">Internship</div>
+            </div>
+            <p class="exp-summary">Built early classroom and technical support experience through laboratory management, device setup, and hands-on troubleshooting for students and staff.</p>
+            <ul class="exp-duties">
+              <li>Assisted in managing the ICT laboratory and maintaining computer systems</li>
+              <li>Set up devices and supported students and staff with technical troubleshooting</li>
+              <li>Conducted routine maintenance checks to ensure functionality of IT equipment</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-label">Skills</div>
+      <h2>Core <em style="font-style:italic;font-family:'Cormorant Garamond',serif;">competencies</em></h2>
+      <div class="skills-grid fade-in">
+        <div class="skill-cell"><div class="skill-dot"></div>Hardware Installation & Troubleshooting</div>
+        <div class="skill-cell"><div class="skill-dot"></div>Software Installation & Configuration</div>
+        <div class="skill-cell"><div class="skill-dot"></div>Windows OS Support</div>
+        <div class="skill-cell"><div class="skill-dot"></div>Network & Connectivity Support</div>
+        <div class="skill-cell"><div class="skill-dot"></div>Microsoft Office Suite</div>
+        <div class="skill-cell"><div class="skill-dot"></div>Google Workspace</div>
+        <div class="skill-cell"><div class="skill-dot"></div>IT Helpdesk & End-User Support</div>
+        <div class="skill-cell"><div class="skill-dot"></div>System Maintenance & Updates</div>
+        <div class="skill-cell"><div class="skill-dot"></div>Device Setup & Configuration</div>
+        <div class="skill-cell"><div class="skill-dot"></div>Digital Records Management</div>
+        <div class="skill-cell"><div class="skill-dot"></div>Information Security Awareness</div>
+        <div class="skill-cell"><div class="skill-dot"></div>Web Development (HTML/CSS/JS)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="container">
+      <div class="section-label">Education & Certification</div>
+      <h2>Academic <em style="font-style:italic;font-family:'Cormorant Garamond',serif;">background</em></h2>
+      <div class="edu-grid fade-in">
+        <div class="edu-card">
+          <div class="edu-tag">Degree</div>
+          <div class="edu-degree">BSc Information Technology Education</div>
+          <div class="edu-inst">University of Education, Winneba</div>
+        </div>
+        <div class="edu-card">
+          <div class="edu-tag">Professional Certification</div>
+          <div class="edu-degree">GTLE Certificate</div>
+          <div class="edu-inst">National Teaching Council (NTC), Ghana</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-label">Contact</div>
+      <h2>Let's <em style="font-style:italic;font-family:'Cormorant Garamond',serif;">connect</em></h2>
+      <p class="contact-sub">Open to new opportunities, collaborations, and conversations.</p>
+      <div class="contact-links">
+        <a href="mailto:opokuantwimaclan@gmail.com" class="contact-row">
+          <div>
+            <div class="contact-row-label">Email</div>
+            <div class="contact-row-value">opokuantwimaclan@gmail.com</div>
+          </div>
+          <div class="contact-arrow">→</div>
+        </a>
+        <div class="contact-row">
+          <div>
+            <div class="contact-row-label">Phone</div>
+            <div class="contact-row-value">+233 535 702 992</div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div>
+            <div class="contact-row-label">Location</div>
+            <div class="contact-row-value">Kumasi, Ashanti, Ghana</div>
+          </div>
+        </div>
+      </div>
+      <p class="footer-note">© 2025 Maclean Opoku Antwi — All rights reserved</p>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  const storedTheme = localStorage.getItem('portfolio-theme');
+  const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const initialTheme = storedTheme || (systemPrefersDark ? 'dark' : 'light');
+  document.body.dataset.theme = initialTheme;
+
+  const themeToggle = document.getElementById('themeToggle');
+  const mobileThemeToggle = document.getElementById('mobileThemeToggle');
+  const themeLabels = document.querySelectorAll('.theme-toggle-text');
+
+  function syncThemeButtons(theme) {
+    const nextMode = theme === 'dark' ? 'Light Mode' : 'Dark Mode';
+    themeLabels.forEach(label => {
+      label.textContent = nextMode;
+    });
+    [themeToggle, mobileThemeToggle].forEach(button => {
+      button.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+    });
+  }
+
+  function setTheme(theme) {
+    document.body.dataset.theme = theme;
+    localStorage.setItem('portfolio-theme', theme);
+    syncThemeButtons(theme);
+  }
+
+  function toggleTheme() {
+    const nextTheme = document.body.dataset.theme === 'dark' ? 'light' : 'dark';
+    setTheme(nextTheme);
+  }
+
+  syncThemeButtons(initialTheme);
+  themeToggle.addEventListener('click', toggleTheme);
+  mobileThemeToggle.addEventListener('click', toggleTheme);
+
+  // Hamburger
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+  });
+  function closeMenu() { mobileMenu.classList.remove('open'); }
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.fade-in, .exp-item').forEach(el => observer.observe(el));
+
+  // Stagger exp items
+  document.querySelectorAll('.exp-item').forEach((el, i) => {
+    el.style.transitionDelay = `${i * 0.08}s`;
+  });
+</script>
+
+</body>
+</html>
+    --surface-strong: #0f1822;
+    --nav-bg: rgba(10,17,26,0.84);
+    --ink: #edf3f9;
+    --ink-soft: #9db0c3;
+    --accent: #8ab4d9;
+    --accent-light: #a9c8e3;
+    --accent-pale: #183147;
+    --accent-warm: #d3ae79;
+    --rule: #24384b;
+    --white: #f7fbff;
+    --shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+    --body-glow: rgba(138,180,217,0.1);
+    --hero-tint-1: rgba(138,180,217,0.08);
+    --hero-tint-2: rgba(211,174,121,0.05);
+    --hero-panel-bg: linear-gradient(180deg, #14283d 0%, #0c1620 100%);
+    --hero-panel-glow: rgba(211,174,121,0.24);
+    --ghost-bg: rgba(15,24,34,0.75);
+    --contact-bg: linear-gradient(180deg, #101a25 0%, #09111a 100%);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background:
+      radial-gradient(circle at top left, var(--body-glow), transparent 28%),
+      linear-gradient(180deg, var(--surface) 0%, var(--bg) 100%);
+    color: var(--ink);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: var(--nav-bg);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--rule);
+    padding: 0 clamp(1.5rem, 5vw, 4rem);
+    height: 60px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .nav-links {
+    display: flex; gap: 2rem; list-style: none;
+  }
+  .nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .nav-links a {
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--accent); }
+  .theme-toggle {
+    border: 1px solid var(--rule);
+    background: color-mix(in srgb, var(--surface-strong) 68%, transparent);
+    color: var(--ink);
+    border-radius: 999px;
+    padding: 0.45rem 0.8rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: border-color 0.25s, background 0.25s, color 0.25s;
+  }
+  .theme-toggle:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  .theme-toggle svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column; gap: 5px;
+    cursor: pointer; background: none; border: none; padding: 4px;
+  }
+  .hamburger span {
+    display: block; width: 22px; height: 1.5px;
+    background: var(--ink); transition: all 0.3s;
+  }
+  .mobile-menu {
+    display: none;
+    position: fixed; top: 60px; left: 0; right: 0; z-index: 99;
+    background: var(--white);
+    border-bottom: 1px solid var(--rule);
+    padding: 1.5rem clamp(1.5rem, 5vw, 4rem);
+    flex-direction: column; gap: 1.2rem;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    font-size: 0.85rem; letter-spacing: 0.06em;
+    text-transform: uppercase; color: var(--ink-soft);
+    text-decoration: none;
+  }
+  .mobile-theme-toggle {
+    margin-top: 0.4rem;
+    width: fit-content;
+  }
+
+  /* ── LAYOUT ── */
+  main { padding-top: 60px; }
+  section { padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 4rem); }
+  .container { max-width: 860px; margin: 0 auto; }
+  .wide { max-width: 1040px; margin: 0 auto; }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: calc(100vh - 60px);
+    display: flex; align-items: center;
+    border-bottom: 1px solid var(--rule);
+    background:
+      linear-gradient(135deg, var(--hero-tint-1), var(--hero-tint-2)),
+      var(--surface-strong);
+  }
+  .hero-inner {
+    max-width: 1100px; margin: 0 auto; width: 100%;
+    padding: clamp(2rem, 5vw, 4rem) 0;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(280px, 360px);
+    gap: clamp(2.5rem, 5vw, 5rem);
+    align-items: center;
+  }
+  .hero-label {
+    font-size: 0.72rem; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--accent);
+    margin-bottom: 1.5rem;
+    display: flex; align-items: center; gap: 0.8rem;
+  }
+  .hero-label::before {
+    content: ''; display: inline-block;
+    width: 28px; height: 1px; background: var(--accent);
+  }
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.8rem, 7vw, 5.5rem);
+    font-weight: 600;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+    margin-bottom: 1.8rem;
+  }
+  h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+  .hero-bio {
+    font-size: clamp(1rem, 2.2vw, 1.15rem);
+    color: var(--ink-soft);
+    max-width: 600px;
+    line-height: 1.75;
+    margin-bottom: 2.5rem;
+  }
+  .hero-actions {
+    display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;
+  }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: var(--accent); color: var(--white);
+    padding: 0.75rem 1.6rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.8rem; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    text-decoration: none; border: 1.5px solid var(--accent);
+    transition: all 0.25s;
+    box-shadow: 0 18px 40px rgba(15,61,99,0.16);
+  }
+  .btn-primary:hover {
+    background: transparent; color: var(--accent);
+    box-shadow: none;
+  }
+  .btn-ghost {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: var(--ghost-bg); color: var(--ink);
+    padding: 0.75rem 1.6rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.8rem; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    text-decoration: none; border: 1.5px solid var(--rule);
+    transition: all 0.25s;
+  }
+  .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+  .hero-contacts {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--rule);
+    display: flex; flex-wrap: wrap; gap: 1.5rem 3rem;
+    font-size: 0.82rem; color: var(--ink-soft);
+  }
+  .hero-contacts a { color: inherit; text-decoration: none; }
+  .hero-contacts a:hover { color: var(--accent); }
+  .contact-item { display: flex; align-items: center; gap: 0.5rem; }
+  .hero-photo-panel {
+    position: relative;
+    background: var(--hero-panel-bg);
+    color: var(--white);
+    padding: 1.25rem;
+    border-radius: 28px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+  .hero-photo-panel::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, var(--hero-panel-glow), transparent 32%);
+    pointer-events: none;
+  }
+  .photo-frame {
+    position: relative;
+    border-radius: 22px;
+    overflow: hidden;
+    background:
+      linear-gradient(160deg, rgba(255,255,255,0.18), rgba(255,255,255,0.06)),
+      linear-gradient(135deg, rgba(181,138,86,0.22), rgba(255,255,255,0.08));
+    border: 1px solid rgba(255,255,255,0.16);
+    display: grid;
+    place-items: center;
+    min-height: 320px;
+  }
+  .photo-frame img {
+    width: 100%;
+    height: auto;
+    max-height: min(68vh, 560px);
+    object-fit: contain;
+    object-position: center;
+    display: block;
+  }
+  .photo-frame.is-empty {
+    padding: 1.5rem;
+  }
+  .photo-placeholder {
+    text-align: center;
+    max-width: 220px;
+  }
+  .photo-frame:not(.is-empty) .photo-placeholder {
+    display: none;
+  }
+  .photo-monogram {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    margin: 0 auto 1rem;
+    background: rgba(255,255,255,0.14);
+    border: 1px solid rgba(255,255,255,0.18);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+  }
+  .photo-placeholder p {
+    font-size: 0.84rem;
+    color: rgba(255,255,255,0.76);
+    line-height: 1.7;
+  }
+  .photo-caption {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: 0.25rem 0.2rem 0;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.82);
+  }
+  .photo-caption strong {
+    display: block;
+    color: var(--white);
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+
+  /* ── SECTION HEADERS ── */
+  .section-label {
+    font-size: 0.7rem; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--accent);
+    margin-bottom: 0.8rem;
+    display: flex; align-items: center; gap: 0.8rem;
+  }
+  .section-label::before {
+    content: ''; display: inline-block;
+    width: 20px; height: 1px; background: var(--accent);
+  }
+  h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.9rem, 4vw, 2.8rem);
+    font-weight: 600; letter-spacing: -0.02em;
+    line-height: 1.15; margin-bottom: 3rem;
+  }
+
+  /* ── ABOUT ── */
+  #about { background: transparent; }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  .about-text p {
+    color: var(--ink-soft); font-size: 0.97rem;
+    margin-bottom: 1.2rem;
+  }
+  .about-stats {
+    display: flex; flex-direction: column; gap: 1.5rem;
+  }
+  .stat-card {
+    background: rgba(255,255,255,0.86);
+    border: 1px solid var(--rule);
+    padding: 1.4rem 1.6rem;
+    border-radius: 20px;
+    box-shadow: 0 16px 40px rgba(16, 40, 63, 0.06);
+  }
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem; font-weight: 600;
+    color: var(--accent-warm); line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+  .stat-label { font-size: 0.8rem; color: var(--ink-soft); letter-spacing: 0.03em; }
+
+  /* ── EXPERIENCE ── */
+  #experience { background: var(--surface-strong); border-top: 1px solid var(--rule); }
   .exp-list { display: flex; flex-direction: column; gap: 0; }
   .exp-item {
     display: grid;
