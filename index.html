@@ -47,7 +47,7 @@
             border-bottom: 1px solid var(--card-border);
         }
 
-        .logo { font-weight: 700; font-size: 1.2rem; color: var(--accent); text-decoration: none; }
+        .logo { font-weight: 700; font-size: 1.1rem; color: var(--accent); text-decoration: none; letter-spacing: 1px; }
         .nav-links { display: flex; gap: 2rem; list-style: none; }
         .nav-links a { text-decoration: none; color: var(--text-main); font-size: 0.9rem; font-weight: 500; transition: 0.2s; }
         .nav-links a:hover { color: var(--accent); }
@@ -80,11 +80,11 @@
             max-width: 600px; margin-bottom: 2.5rem;
         }
 
-        /* --- Floating Picture Frame --- */
+        /* --- Picture Frame & Caption --- */
         .image-frame-container {
             position: relative;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
         }
 
@@ -95,6 +95,7 @@
             height: 110%;
             background: radial-gradient(circle, var(--frame-glow) 0%, transparent 70%);
             z-index: -1;
+            top: -5%;
         }
 
         .image-frame {
@@ -120,6 +121,18 @@
 
         .image-frame:hover { transform: translateY(-10px) rotate(1deg); }
 
+        .image-name-tag {
+            margin-top: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.1rem;
+            background: var(--white);
+            padding: 8px 20px;
+            border-radius: 50px;
+            border: 1px solid var(--card-border);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
         .btn-group { display: flex; gap: 1rem; }
         .btn {
             padding: 14px 30px; border-radius: 8px; text-decoration: none;
@@ -129,12 +142,11 @@
         .btn-primary { background: var(--accent); color: white; }
         .btn-secondary { border: 1px solid var(--card-border); color: var(--text-main); }
 
-        /* --- Sections --- */
+        /* --- Experience Cards --- */
         section { padding: 100px 10%; border-bottom: 1px solid var(--card-border); }
         .section-tag { color: var(--accent); font-weight: 700; text-transform: uppercase; font-size: 0.8rem; display: flex; align-items: center; gap: 8px; margin-bottom: 1rem; }
         h2 { font-size: 2.2rem; color: var(--primary); margin-bottom: 2.5rem; }
 
-        /* --- Experience Cards --- */
         .card { background: var(--white); border: 1px solid var(--card-border); padding: 2.5rem; border-radius: 24px; margin-bottom: 1.5rem; transition: 0.3s; }
         .card:hover { border-color: var(--accent); transform: scale(1.01); }
         .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem; }
@@ -150,7 +162,9 @@
 
         /* --- Contact --- */
         .contact-box { background: var(--white); border: 1px solid var(--card-border); border-radius: 40px; padding: 4rem 2rem; text-align: center; }
-        .contact-large { font-size: clamp(1.2rem, 4vw, 2.2rem); color: var(--accent); text-decoration: none; font-weight: 700; display: block; margin: 1.5rem 0; word-break: break-all; }
+        .contact-large { font-size: clamp(1.2rem, 4vw, 2.2rem); color: var(--accent); text-decoration: none; font-weight: 700; display: block; margin: 0.5rem 0; word-break: break-all; }
+        .contact-phone { font-size: 1.3rem; font-weight: 700; color: var(--primary); margin-bottom: 1.5rem; display: block; }
+        
         .social-links { display: flex; justify-content: center; gap: 1.5rem; margin-top: 2rem; flex-wrap: wrap; }
         .social-item { text-decoration: none; color: var(--text-main); font-weight: 600; display: flex; align-items: center; gap: 8px; padding: 10px 24px; border: 1px solid var(--card-border); border-radius: 50px; transition: 0.3s; }
         .social-item:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-3px); }
@@ -176,7 +190,7 @@
 <body>
 
     <nav>
-        <a href="#" class="logo">MACLEAN</a>
+        <a href="#" class="logo">MACLEAN'S PORTFOLIO</a>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
@@ -201,6 +215,7 @@
                 <div class="image-frame">
                     <img src="maclean-photo.jpg" alt="Maclean Opoku Antwi">
                 </div>
+                <div class="image-name-tag">Maclean Opoku Antwi</div>
             </div>
         </div>
     </header>
@@ -296,6 +311,7 @@
             <p style="color: var(--text-light); margin-top: 1rem;">I am always open to discussing new IT projects or teaching opportunities.</p>
             
             <a href="mailto:opokuantwimaclean@gmail.com" class="contact-large">opokuantwimaclean@gmail.com</a>
+            <span class="contact-phone">+233 535 702 992</span>
             
             <div class="social-links">
                 <a href="https://linkedin.com/in/maclean-opoku-antwi" target="_blank" class="social-item">
