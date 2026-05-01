@@ -49,7 +49,7 @@
 
         .logo { font-weight: 700; font-size: 1.1rem; color: var(--accent); text-decoration: none; letter-spacing: 1px; }
         .nav-links { display: flex; gap: 2rem; list-style: none; }
-        .nav-links a { text-decoration: none; color: var(--text-main); font-size: 0.9rem; font-weight: 500; transition: 0.2s; }
+        .nav-links a { text-decoration: none; color: var(--text-main); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; transition: 0.2s; }
         .nav-links a:hover { color: var(--accent); }
 
         /* --- Hero Section --- */
@@ -57,7 +57,7 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
-            padding: 100px 10% 60px 10%;
+            padding: 120px 10% 60px 10%;
         }
 
         .hero-container {
@@ -125,9 +125,9 @@
             margin-top: 1.5rem;
             font-weight: 700;
             color: var(--primary);
-            font-size: 1.1rem;
+            font-size: 1rem;
             background: var(--white);
-            padding: 8px 20px;
+            padding: 8px 24px;
             border-radius: 50px;
             border: 1px solid var(--card-border);
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
@@ -142,29 +142,40 @@
         .btn-primary { background: var(--accent); color: white; }
         .btn-secondary { border: 1px solid var(--card-border); color: var(--text-main); }
 
-        /* --- Experience Cards --- */
+        /* --- Sections --- */
         section { padding: 100px 10%; border-bottom: 1px solid var(--card-border); }
         .section-tag { color: var(--accent); font-weight: 700; text-transform: uppercase; font-size: 0.8rem; display: flex; align-items: center; gap: 8px; margin-bottom: 1rem; }
         h2 { font-size: 2.2rem; color: var(--primary); margin-bottom: 2.5rem; }
 
+        /* --- Cards --- */
         .card { background: var(--white); border: 1px solid var(--card-border); padding: 2.5rem; border-radius: 24px; margin-bottom: 1.5rem; transition: 0.3s; }
-        .card:hover { border-color: var(--accent); transform: scale(1.01); }
-        .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem; }
-        .card-title { font-size: 1.4rem; font-weight: 700; color: var(--primary); }
+        .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; }
+        .card-title { font-size: 1.3rem; font-weight: 700; color: var(--primary); }
         .card-meta { font-size: 0.85rem; color: var(--accent); font-weight: 700; background: rgba(79, 70, 229, 0.1); padding: 4px 12px; border-radius: 6px; }
-        .card-bullets { list-style: none; }
+        .card-subtext { color: var(--text-light); font-weight: 600; margin-bottom: 1rem; display: block; }
+        .card-bullets { list-style: none; margin-top: 1rem; }
         .card-bullets li { position: relative; padding-left: 1.8rem; margin-bottom: 0.8rem; color: var(--text-light); }
         .card-bullets li::before { content: ""; position: absolute; left: 0; top: 10px; width: 12px; height: 2px; background: var(--accent); }
 
-        /* --- Skills Grid --- */
+        /* --- Skills --- */
         .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1.2rem; }
         .skill-item { background: var(--white); border: 1px solid var(--card-border); padding: 1.2rem; text-align: center; border-radius: 14px; font-weight: 600; font-size: 0.9rem; }
 
-        /* --- Contact --- */
-        .contact-box { background: var(--white); border: 1px solid var(--card-border); border-radius: 40px; padding: 4rem 2rem; text-align: center; }
-        .contact-large { font-size: clamp(1.2rem, 4vw, 2.2rem); color: var(--accent); text-decoration: none; font-weight: 700; display: block; margin: 0.5rem 0; word-break: break-all; }
-        .contact-phone { font-size: 1.3rem; font-weight: 700; color: var(--primary); margin-bottom: 1.5rem; display: block; }
+        /* --- Contact Box FIXED FOR MOBILE EMAIL --- */
+        .contact-box { background: var(--white); border: 1px solid var(--card-border); border-radius: 40px; padding: 4rem 2rem; text-align: center; overflow: hidden; }
         
+        .contact-large { 
+            font-size: clamp(1rem, 4.5vw, 2.2rem); /* Adjusted for better mobile scaling */
+            color: var(--accent); 
+            text-decoration: none; 
+            font-weight: 700; 
+            display: block; 
+            margin: 0.5rem 0; 
+            overflow-wrap: break-word; /* Prevents overflow */
+            word-wrap: break-word; 
+        }
+
+        .contact-phone { font-size: 1.3rem; font-weight: 700; color: var(--primary); margin-bottom: 1.5rem; display: block; }
         .social-links { display: flex; justify-content: center; gap: 1.5rem; margin-top: 2rem; flex-wrap: wrap; }
         .social-item { text-decoration: none; color: var(--text-main); font-weight: 600; display: flex; align-items: center; gap: 8px; padding: 10px 24px; border: 1px solid var(--card-border); border-radius: 50px; transition: 0.3s; }
         .social-item:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-3px); }
@@ -172,7 +183,7 @@
         footer { padding: 40px 10%; text-align: center; font-size: 0.85rem; color: var(--text-light); }
         .icon { width: 20px; height: 20px; fill: currentColor; }
 
-        /* Responsive */
+        /* Responsive Styles */
         @media (max-width: 1024px) {
             .hero-container { grid-template-columns: 1fr; text-align: center; }
             .hero-text { order: 2; }
@@ -184,6 +195,7 @@
             .nav-links { display: none; }
             section { padding: 60px 5%; }
             .card-header { flex-direction: column; gap: 0.5rem; }
+            .contact-box { padding: 3rem 1rem; } /* Reduced padding to give email more room */
         }
     </style>
 </head>
@@ -194,6 +206,7 @@
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -227,7 +240,7 @@
         </span>
         <h2>Technology is for everyone.</h2>
         <p style="max-width: 850px; font-size: 1.15rem; color: var(--text-light);">
-            I hold a BSc in Information Technology Education. This means I don't just fix computers—I communicate technical ideas in a way that anyone can understand. My goal is to ensure that technology solves problems instead of creating them.
+            I hold a BSc in Information Technology Education from the University of Education, Winneba. This means I don't just fix computers—I communicate technical ideas in a way that anyone can understand. My goal is to ensure that technology solves problems instead of creating them.
         </p>
     </section>
 
@@ -242,7 +255,7 @@
             <div class="card-header">
                 <div>
                     <div class="card-title">Computing Teacher & IT Support</div>
-                    <div style="color: var(--text-light); font-weight: 500;">Humpty Dumpty School</div>
+                    <span class="card-subtext">Humpty Dumpty School</span>
                 </div>
                 <div class="card-meta">2024 — Present</div>
             </div>
@@ -258,7 +271,7 @@
             <div class="card-header">
                 <div>
                     <div class="card-title">IT Support Specialist</div>
-                    <div style="color: var(--text-light); font-weight: 500;">Office of the Administrator of Stool Lands</div>
+                    <span class="card-subtext">Office of the Administrator of Stool Lands</span>
                 </div>
                 <div class="card-meta">2023 — 2024</div>
             </div>
@@ -274,7 +287,7 @@
             <div class="card-header">
                 <div>
                     <div class="card-title">ICT Intern Teacher</div>
-                    <div style="color: var(--text-light); font-weight: 500;">Kumasi High School</div>
+                    <span class="card-subtext">Kumasi High School</span>
                 </div>
                 <div class="card-meta">2022 — 2023</div>
             </div>
@@ -283,6 +296,31 @@
                 <li>Assisted students and staff with technical problems and device setup.</li>
                 <li>Performed regular maintenance on IT equipment to ensure they worked properly.</li>
             </ul>
+        </div>
+    </section>
+
+    <section id="education">
+        <span class="section-tag">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM3.89 9.5l8.11 4.42 8.11-4.42-8.11-4.42L3.89 9.5zM11 15.3l-5.8-3.17-.92 1.67L11 17.5l6.72-3.7-.92-1.67-5.8 3.17z"/></svg>
+            Background
+        </span>
+        <h2>Education & Certifications</h2>
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <div class="card-title">BSc Information Technology Education</div>
+                    <span class="card-subtext">University of Education, Winneba</span>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <div class="card-title">GTLE Certificate</div>
+                    <span class="card-subtext">National Teaching Council (NTC), Ghana</span>
+                </div>
+            </div>
+            <p style="color: var(--text-light); font-size: 0.95rem;">Official professional license qualifying me as a recognized educator in Ghana.</p>
         </div>
     </section>
 
@@ -308,7 +346,7 @@
         <div class="contact-box">
             <span class="section-tag" style="justify-content: center;">Contact</span>
             <h2>Let's work together</h2>
-            <p style="color: var(--text-light); margin-top: 1rem;">I am always open to discussing new IT or teaching opportunities.</p>
+            <p style="color: var(--text-light); margin-top: 1rem;">I am always open to discussing new IT projects or teaching opportunities.</p>
             
             <a href="mailto:opokuantwimaclean@gmail.com" class="contact-large">opokuantwimaclean@gmail.com</a>
             <span class="contact-phone">+233 535 702 992</span>
